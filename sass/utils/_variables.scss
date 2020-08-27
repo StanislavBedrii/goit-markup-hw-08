@@ -1,0 +1,29 @@
+/* цвет основного текста заголовков (nav, h2-6) #212121; */
+/* цвет основного текста (p, a) #757575; */
+/* белый цвет на темном фоне (h1, p, btn, (блок3)) #FFFFFF; */
+/* акцент (btn, logo, a) #2196F3 */
+/* цвет лого #000000 */
+/* цвет адреса подвала  rgba(255, 255, 255, 0.6) */
+
+/* цвет основного фона #FFFFFF */
+/* цвет вторичного (белого) фона #F5F4FA; */
+/* цвет вторичного (серого) фона rgba(47, 48, 58, 0.8) */
+/* фон подвала #2F303A */
+
+/* ROOT */
+
+$main-font: "Roboto", sans-serif;
+$secondary-font: "Raleway", sans-serif;
+$primary-title-color: #212121;
+$primary-text-color: #757575;
+$secondary-white-text-color: #ffffff;
+$accent-color: #2196f3;
+$footer-address-text-color: rgba(255, 255, 255, 0.6);
+$primary-bgr-color: #ffffff;
+$primary-bgr-filter-btn-color: #f5f4fa;
+$secondary-bgr-color: rgba(47, 48, 58, 0.8);
+$footer-bgr-color: #2f303a;
+
+$transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bgr-color: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);

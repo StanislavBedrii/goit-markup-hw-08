@@ -1,0 +1,16 @@
+@import "./base/normalize";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/base";
+@import "./base/animation";
+@import "./components/container";
+@import "./components/section";
+@import "./components/modal";
+
+@import "./layot/index/header";
+@import "./layot/index/hero";
+@import "./layot/index/advantages";
+@import "./layot/index/we-doing";
+@import "./layot/index/our-team";
+@import "./layot/index/client";
+@import "./layot/index/footer";

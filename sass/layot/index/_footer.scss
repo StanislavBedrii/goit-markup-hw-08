@@ -1,0 +1,143 @@
+/* Оформление ПОДВАЛА страницы */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $footer-bgr-color;
+
+  .container {
+    display: flex;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  font-family: $secondary-font;
+  @include font($fs: 26px, $fw: 700, $lh: 1.19);
+  color: $secondary-white-text-color;
+}
+
+.footer-address {
+  margin-right: 69px;
+}
+
+.footer-address-map {
+  font-style: normal;
+  @include font($fs: 14px);
+  color: $secondary-white-text-color;
+  transition: $transition-color;
+}
+
+.footer-address-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-address-mail,
+.footer-address-tel {
+  @include font($fs: 14px);
+  color: $footer-address-text-color;
+  transition: $transition-color;
+}
+.join {
+  @include font($fs: 14px);
+  text-transform: uppercase;
+  color: $secondary-white-text-color;
+  margin-bottom: 20px;
+}
+
+.footer-join {
+  margin-top: 12px;
+  margin-right: 94px;
+}
+
+.footer-address-mail:hover,
+.footer-address-mail:focus,
+.footer-address-tel:hover,
+.footer-address-tel:focus,
+.footer-address-map:hover,
+.footer-address-map:focus {
+  color: $accent-color;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  @include flex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: $transition-bgr-color;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.footer-social-icon {
+  fill: $primary-bgr-color;
+  width: 20px;
+  height: 20px;
+}
+
+.subscribe {
+  @include flex();
+  @include font($lh: 1.88);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: $accent-color;
+  color: $secondary-white-text-color;
+}
+
+.footer-subscribe-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 11px;
+  fill: $secondary-white-text-color;
+}
+
+.form-subscribe {
+  @include flex();
+  flex-wrap: wrap;
+}
+
+.form-subscribe-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  background-color: $footer-bgr-color;
+  color: $footer-address-text-color;
+
+  &::placeholder {
+    color: $footer-address-text-color;
+  }
+}
+
+.form-subscribe-title {
+  @include font($fs: 14px);
+  display: block;
+  padding-top: 12px;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  align-items: center;
+  color: $secondary-white-text-color;
+}

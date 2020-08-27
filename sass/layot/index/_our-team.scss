@@ -1,0 +1,71 @@
+/* Оформление секции НАША КОМАНДА */
+.our-team {
+  background-color: #f5f4fa;
+}
+.our-team-img {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.our-team-name {
+  @include font($fw: 500, $lh: 1.19);
+  text-align: center;
+}
+.our-team-profession {
+  @include font($fw: 400, $lh: 1.19);
+  margin-bottom: 16px;
+  text-align: center;
+  color: $primary-text-color;
+}
+.our-team-list {
+  display: flex;
+}
+
+.our-team-item {
+  width: 270px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $primary-bgr-color;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.our-team-social-list {
+  display: flex;
+  margin-left: 32px;
+}
+
+.our-team-social-item {
+  padding-bottom: 24px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.our-team-social-link {
+  @include flex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: $transition-bgr-color;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:hover .our-team-social-icon,
+  &:focus .our-team-social-icon {
+    fill: #ffffff;
+  }
+}
+
+.our-team-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}

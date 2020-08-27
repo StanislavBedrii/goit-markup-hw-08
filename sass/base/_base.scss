@@ -1,0 +1,46 @@
+body {
+  background-color: $primary-bgr-color;
+  color: $primary-title-color;
+  font-family: $main-font;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+}
+
+/* RESET decoration */
+.link {
+  text-decoration: none;
+  display: block;
+}
+
+.list {
+  list-style: none;
+}

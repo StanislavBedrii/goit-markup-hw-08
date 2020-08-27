@@ -1,0 +1,17 @@
+// @include font();
+
+//@include font($fs: 14px, $fw: 400, $lh: 1.71);
+
+// @include flex();
+
+@mixin font($fs: 16px, $fw: 700, $lh: 1.14) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin flex($df: flex, $jc: center, $ai: center) {
+  display: $df;
+  justify-content: $jc;
+  align-items: $ai;
+}

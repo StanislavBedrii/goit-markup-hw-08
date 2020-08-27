@@ -1,0 +1,36 @@
+/* Оформление секции НАШИ ПРЕИМУЩЕСТВА =================== */
+
+.advantages-list {
+  display: flex;
+}
+.advantages-list-name {
+  @include font();
+  text-transform: uppercase;
+}
+
+.advantages-description {
+  @include font($fs: 14px, $fw: 400, $lh: 1.71);
+  color: $primary-text-color;
+}
+
+.advantages-list-item {
+  width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.advantages-icon-box {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+
+.advantages-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+}

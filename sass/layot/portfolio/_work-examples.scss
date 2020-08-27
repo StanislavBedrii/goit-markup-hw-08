@@ -1,0 +1,78 @@
+/* Оформление примеров-работ */
+.section-work-examples {
+  padding-bottom: 94px;
+}
+.work-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-examples-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 370px;
+  height: 404px;
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
+}
+
+.work-examples-title {
+  font-family: $main-font;
+  @include font($fs: 18px, $lh: 2);
+  color: $primary-title-color;
+  letter-spacing: 0.06em;
+}
+
+.work-examples-subtitle {
+  @include font($fw: 400, $lh: 1.88);
+  color: $primary-text-color;
+}
+
+.work-examples-description {
+  @include font($fs: 18px, $fw: 400, $lh: 1.56);
+  padding: 63px 24px;
+  color: $secondary-white-text-color;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: $transition-transform;
+}
+
+.work-examples-list h2 {
+  margin-bottom: 4px;
+}
+
+.work-examples-title-subtitle {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.work-examples-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-examples-link:hover .work-examples-description,
+.work-examples-link:focus .work-examples-description {
+  transform: translateY(0%);
+}
+
+.work-examples-link:hover,
+.work-examples-link:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}

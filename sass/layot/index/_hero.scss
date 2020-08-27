@@ -1,0 +1,40 @@
+/* Оформление секции ГЕРОЙ ======================*/
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  background-image: linear-gradient($secondary-bgr-color, $secondary-bgr-color),
+    url("../images/hero-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.title-hero {
+  @include font($fs: 44px, $fw: 900, $lh: 1.36);
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $secondary-white-text-color;
+}
+.button {
+  display: block;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  @include font($lh: 1.88);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: $accent-color;
+  color: $secondary-white-text-color;
+  outline: none;
+}
