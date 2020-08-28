@@ -1,4 +1,5 @@
 /* Оформление секции ГЕРОЙ ======================*/
+
 .hero {
   max-width: 1600px;
   margin-left: auto;
@@ -37,4 +38,73 @@
   background-color: $accent-color;
   color: $secondary-white-text-color;
   outline: none;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    max-width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(
+        $secondary-bgr-color,
+        $secondary-bgr-color
+      ),
+      url("../images/hero/hero-mobile.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $secondary-bgr-color,
+          $secondary-bgr-color
+        ),
+        url("../images/hero/hero-mobile@2x.jpg");
+    }
+
+    .title-hero {
+      @include font($fs: 26px, $fw: 900, $lh: 1.62);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(
+        $secondary-bgr-color,
+        $secondary-bgr-color
+      ),
+      url("../images/hero/hero-tablet.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $secondary-bgr-color,
+          $secondary-bgr-color
+        ),
+        url("../images/hero/hero-tablet@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    background-image: linear-gradient(
+        $secondary-bgr-color,
+        $secondary-bgr-color
+      ),
+      url("../images/hero/hero-desktop.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          $secondary-bgr-color,
+          $secondary-bgr-color
+        ),
+        url("../images/hero/hero-desktop@2x.jpg");
+    }
+  }
 }
