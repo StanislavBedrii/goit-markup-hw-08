@@ -1,36 +1,45 @@
 /* Оформление секции Чем мы занимаемся */
 /* для всех title - h2 */
-.title {
-  @include font($fs: 36px, $lh: 1.17);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
 
-.we-doing-list {
-  display: flex;
-}
-
-.we-doing-list-item {
-  position: relative;
-  width: 370px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
+@media screen and (max-width: 1199px) {
+  .we-doing {
+    display: none;
   }
 }
 
-.we-doing-description {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  @include font($fs: 14px);
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 27px;
-  background-color: $secondary-bgr-color;
-  color: $secondary-white-text-color;
+@media screen and (min-width: 1200px) {
+  .title {
+    @include font($fs: 36px, $lh: 1.17);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  .we-doing-list {
+    display: flex;
+  }
+
+  .we-doing-list-item {
+    position: relative;
+    width: 370px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .we-doing-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    @include font($fs: 14px);
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 27px;
+    background-color: $secondary-bgr-color;
+    color: $secondary-white-text-color;
+  }
 }

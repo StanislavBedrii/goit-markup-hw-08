@@ -13,14 +13,6 @@
   color: $primary-text-color;
 }
 
-.advantages-list-item {
-  width: 270px;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 .advantages-icon-box {
   width: 270px;
   height: 120px;
@@ -33,4 +25,105 @@
   display: block;
   width: 70px;
   height: 70px;
+}
+// Стили для смартфона ======================
+
+@media screen and (max-width: 767px) {
+  .advantages {
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .advantages-list {
+    display: block;
+  }
+
+  .advantages-list-name {
+    @include font($fs: 14px);
+    text-align: center;
+  }
+  .advantages-list-item {
+    width: 450px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .advantages-icon-box {
+    width: 450px;
+    padding: 25px 190px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
+}
+
+// Стили для планшета ======================
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages-list-name {
+    @include font($fs: 14px);
+  }
+  .advantages-list-item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .advantages-icon-box {
+    width: 354px;
+    padding: 25px 142px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
+}
+
+// Стили для десктопа ======================
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .advantages-list-item {
+    margin: 0;
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .advantages-icon-box {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
 }

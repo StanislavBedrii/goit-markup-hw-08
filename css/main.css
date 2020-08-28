@@ -324,7 +324,7 @@ img {
 @media screen and (min-width: 480px) {
   .container {
     margin: 0 auto;
-    min-width: 480px;
+    width: 480px;
   }
 }
 
@@ -577,6 +577,86 @@ img {
   border: 1px solid #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .modal-form {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .modal-form-title {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .modal-form-option-label {
+    font-size: 10px;
+    line-height: 1.17;
+  }
+  .modal-form-option-link {
+    font-size: 10px;
+    line-height: 1.17;
+  }
+  .modal-form-wrapper {
+    margin-bottom: 15px;
+  }
+  .modal-form-text-label {
+    margin-bottom: 15px;
+  }
+  .modal-form-wrapper:focus-within > .modal-form-label,
+  .modal-form-input:not(:placeholder-shown) + .modal-form-label {
+    color: #2196f3;
+    transform: translate(-24px, -34px);
+  }
+  .modal-form-message:focus-within > .modal-form-text-label,
+  .modal-form-text:not(:placeholder-shown) + .modal-form-text-label {
+    transform: translate(-1px, -26px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form {
+    width: 450px;
+  }
+  .modal-form-input {
+    width: 370px;
+  }
+  .modal-form-text {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.15;
+  }
+  .modal-form {
+    width: 528px;
+  }
+  .modal-form-input {
+    width: 448px;
+  }
+  .modal-form-text {
+    width: 448px;
+  }
+  .modal-form-option-label {
+    font-size: 14px;
+    line-height: 1.71;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  .modal-form-option-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 /* Шапка страницы ======================================= */
 /* Оформление логотипа */
 @media screen and (max-width: 767px) {
@@ -612,6 +692,7 @@ img {
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     transform: translateY(-100%);
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -935,6 +1016,7 @@ img {
     max-width: 480px;
     padding-top: 118px;
     padding-bottom: 118px;
+    margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero-mobile.jpg");
   }
 }
@@ -998,14 +1080,6 @@ img {
   color: #757575;
 }
 
-.advantages-list-item {
-  width: 270px;
-}
-
-.advantages-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .advantages-icon-box {
   width: 270px;
   height: 120px;
@@ -1020,45 +1094,136 @@ img {
   height: 70px;
 }
 
+@media screen and (max-width: 767px) {
+  .advantages {
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .advantages-list {
+    display: block;
+  }
+  .advantages-list-name {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+  }
+  .advantages-list-item {
+    width: 450px;
+  }
+  .advantages-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .advantages-icon-box {
+    width: 450px;
+    padding: 25px 190px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .advantages-list-name {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+  }
+  .advantages-list-item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  .advantages-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .advantages-icon-box {
+    width: 354px;
+    padding: 25px 142px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .advantages-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .advantages-list-item {
+    margin: 0;
+    width: 270px;
+  }
+  .advantages-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .advantages-icon-box {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
+}
+
 /* Оформление секции Чем мы занимаемся */
 /* для всех title - h2 */
-.title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.17;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .we-doing {
+    display: none;
+  }
 }
 
-.we-doing-list {
-  display: flex;
-}
-
-.we-doing-list-item {
-  position: relative;
-  width: 370px;
-}
-
-.we-doing-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.we-doing-description {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 27px;
-  background-color: rgba(47, 48, 58, 0.8);
-  color: #ffffff;
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+  .we-doing-list {
+    display: flex;
+  }
+  .we-doing-list-item {
+    position: relative;
+    width: 370px;
+  }
+  .we-doing-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .we-doing-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #ffffff;
+  }
 }
 
 /* Оформление секции НАША КОМАНДА */
