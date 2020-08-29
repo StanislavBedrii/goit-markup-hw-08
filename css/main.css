@@ -1251,6 +1251,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .our-team {
+    min-width: 480px;
     padding-top: 60px;
     padding-bottom: 60px;
     margin-left: auto;
@@ -1359,6 +1360,7 @@ img {
     line-height: 1.18;
   }
   .client {
+    min-width: 480px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -1545,6 +1547,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .footer {
+    min-width: 480px;
     text-align: center;
   }
   .footer-logo {
