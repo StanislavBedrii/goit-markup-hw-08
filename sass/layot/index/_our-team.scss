@@ -17,21 +17,6 @@
   text-align: center;
   color: $primary-text-color;
 }
-.our-team-list {
-  display: flex;
-}
-
-.our-team-item {
-  width: 270px;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 0px 0px 4px 4px;
-  background-color: $primary-bgr-color;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
 
 .our-team-social-list {
   display: flex;
@@ -68,4 +53,89 @@
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+}
+
+// Стили для смартфона ======================
+
+@media screen and (max-width: 767px) {
+  .our-team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    @include font($fs: 28px, $lh: 1.18);
+    text-align: center;
+  }
+
+  .our-team-img {
+    width: 450px;
+    height: 320px;
+  }
+
+  .our-team-item {
+    width: 450px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $primary-bgr-color;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .our-team-social-list {
+    display: flex;
+    margin-left: 122px;
+  }
+}
+
+// Стили для планшета ======================
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .title {
+    @include font($fs: 28px, $lh: 1.18);
+    text-align: center;
+  }
+
+  .our-team-img {
+    width: 354px;
+    height: 260px;
+  }
+
+  .our-team-item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $primary-bgr-color;
+  }
+}
+
+// Стили для десктопа ======================
+
+@media screen and (min-width: 1200px) {
+  .our-team-list {
+    display: flex;
+  }
+
+  .our-team-item {
+    width: 270px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $primary-bgr-color;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
