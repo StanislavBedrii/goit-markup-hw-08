@@ -323,8 +323,9 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    margin: 0 auto;
     width: 480px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -343,6 +344,8 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Оформление модального окна */
@@ -472,12 +475,11 @@ img {
 }
 
 .modal-form-title {
-  font-weight: bold;
-  margin-bottom: 30px;
   font-size: 20px;
+  font-weight: 700;
   line-height: 1.15;
+  margin-bottom: 30px;
   text-align: center;
-  letter-spacing: 0.03em;
   color: #212121;
 }
 
@@ -533,7 +535,6 @@ img {
   align-items: center;
   width: 16px;
   height: 15px;
-  margin-left: 13px;
   border: 2px solid;
   border-radius: 4px;
 }
@@ -577,83 +578,39 @@ img {
   border: 1px solid #2196f3;
 }
 
-@media screen and (max-width: 479px) {
-  .modal-form {
-    padding-top: 35px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+@media screen and (max-width: 767px) {
   .modal-form-title {
-    margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
   }
-  .modal-form-option-label {
-    font-size: 10px;
-    line-height: 1.17;
-  }
-  .modal-form-option-link {
-    font-size: 10px;
-    line-height: 1.17;
-  }
-  .modal-form-wrapper {
-    margin-bottom: 15px;
-  }
-  .modal-form-text-label {
-    margin-bottom: 15px;
-  }
-  .modal-form-wrapper:focus-within > .modal-form-label,
-  .modal-form-input:not(:placeholder-shown) + .modal-form-label {
-    color: #2196f3;
-    transform: translate(-24px, -34px);
-  }
-  .modal-form-message:focus-within > .modal-form-text-label,
-  .modal-form-text:not(:placeholder-shown) + .modal-form-text-label {
-    transform: translate(-1px, -26px);
-  }
-}
-
-@media screen and (min-width: 480px) {
   .modal-form {
     width: 450px;
   }
-  .modal-form-input {
-    width: 370px;
+  .modal-form-option-span {
+    margin-left: 8px;
+    line-height: 1.16;
   }
-  .modal-form-text {
-    width: 370px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal-form-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .modal-form {
+    width: 450px;
+  }
+  .modal-form-option-span {
+    margin-left: 8px;
+    line-height: 1.16;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .modal-form-title {
-    margin-bottom: 30px;
-    font-size: 20px;
-    line-height: 1.15;
-  }
-  .modal-form {
-    width: 528px;
-  }
-  .modal-form-input {
-    width: 448px;
-  }
-  .modal-form-text {
-    width: 448px;
-  }
-  .modal-form-option-label {
-    font-size: 14px;
-    line-height: 1.71;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
-  .modal-form-option-link {
-    font-size: 14px;
-    line-height: 1.71;
+  .modal-form-custom-checkbox {
+    margin-left: 13px;
   }
 }
 
@@ -1014,10 +971,11 @@ img {
 
 @media screen and (max-width: 767px) {
   .hero {
-    max-width: 480px;
+    width: 480px;
     padding-top: 118px;
     padding-bottom: 118px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero-mobile.jpg");
   }
 }
@@ -1295,6 +1253,8 @@ img {
   .our-team {
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .title {
     font-size: 28px;
@@ -1332,6 +1292,8 @@ img {
     font-weight: 700;
     line-height: 1.18;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .our-team-img {
     width: 354px;

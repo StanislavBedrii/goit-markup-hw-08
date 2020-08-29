@@ -127,12 +127,9 @@
 }
 
 .modal-form-title {
-  font-weight: bold;
+  @include font($fs: 20px, $lh: 1.15);
   margin-bottom: 30px;
-  font-size: 20px;
-  line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.03em;
   color: $primary-title-color;
 }
 
@@ -188,7 +185,6 @@
   align-items: center;
   width: 16px;
   height: 15px;
-  margin-left: 13px;
   border: 2px solid;
   border-radius: 4px;
 }
@@ -232,87 +228,129 @@
   border: 1px solid $accent-color;
 }
 
-@media screen and (max-width: 479px) {
-  .modal-form {
-    padding-top: 35px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+// Стили для смартфона ======================
 
+@media screen and (max-width: 767px) {
   .modal-form-title {
-    margin-bottom: 15px;
-    font-size: 15px;
+    @include font($lh: 1.5);
   }
 
-  .modal-form-option-label {
-    font-size: 10px;
-    line-height: 1.17;
-  }
-  .modal-form-option-link {
-    font-size: 10px;
-    line-height: 1.17;
-  }
-  .modal-form-wrapper {
-    margin-bottom: 15px;
-  }
-  .modal-form-text-label {
-    margin-bottom: 15px;
-  }
-
-  .modal-form-wrapper:focus-within > .modal-form-label,
-  .modal-form-input:not(:placeholder-shown) + .modal-form-label {
-    color: #2196f3;
-    transform: translate(-24px, -34px);
-  }
-
-  .modal-form-message:focus-within > .modal-form-text-label,
-  .modal-form-text:not(:placeholder-shown) + .modal-form-text-label {
-    transform: translate(-1px, -26px);
-  }
-}
-
-@media screen and (min-width: 480px) {
   .modal-form {
     width: 450px;
   }
-  .modal-form-input {
-    width: 370px;
-  }
-  .modal-form-text {
-    width: 370px;
+
+  .modal-form-option-span {
+    margin-left: 8px;
+    line-height: 1.16;
   }
 }
 
-@media screen and (min-width: 1200px) {
+// Стили для планшета ======================
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .modal-form-title {
-    margin-bottom: 30px;
-    font-size: 20px;
-    line-height: 1.15;
+    @include font($lh: 1.5);
   }
 
   .modal-form {
-    width: 528px;
+    width: 450px;
   }
-  .modal-form-input {
-    width: 448px;
-  }
-  .modal-form-text {
-    width: 448px;
-  }
-  .modal-form-option-label {
-    font-size: 14px;
-    line-height: 1.71;
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
-  .modal-form-option-link {
-    font-size: 14px;
-    line-height: 1.71;
+
+  .modal-form-option-span {
+    margin-left: 8px;
+    line-height: 1.16;
   }
 }
+
+// Стили для десктопа ======================
+
+@media screen and (min-width: 1200px) {
+  .modal-form-custom-checkbox {
+    margin-left: 13px;
+  }
+}
+
+// @media screen and (max-width: 479px) {
+//   .modal-form {
+//     padding-top: 35px;
+//     padding-bottom: 15px;
+//     padding-left: 25px;
+//     padding-right: 25px;
+//   }
+
+//   .modal-form-title {
+//     margin-bottom: 15px;
+//     font-size: 15px;
+//   }
+
+//   .modal-form-option-label {
+//     font-size: 10px;
+//     line-height: 1.17;
+//   }
+//   .modal-form-option-link {
+//     font-size: 10px;
+//     line-height: 1.17;
+//   }
+//   .modal-form-wrapper {
+//     margin-bottom: 15px;
+//   }
+//   .modal-form-text-label {
+//     margin-bottom: 15px;
+//   }
+
+//   .modal-form-wrapper:focus-within > .modal-form-label,
+//   .modal-form-input:not(:placeholder-shown) + .modal-form-label {
+//     color: #2196f3;
+//     transform: translate(-24px, -34px);
+//   }
+
+//   .modal-form-message:focus-within > .modal-form-text-label,
+//   .modal-form-text:not(:placeholder-shown) + .modal-form-text-label {
+//     transform: translate(-1px, -26px);
+//   }
+// }
+
+// @media screen and (min-width: 480px) {
+//   .modal-form {
+//     width: 450px;
+//   }
+//   .modal-form-input {
+//     width: 370px;
+//   }
+//   .modal-form-text {
+//     width: 370px;
+//   }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .modal-form-title {
+//     margin-bottom: 30px;
+//     font-size: 20px;
+//     line-height: 1.15;
+//   }
+
+//   .modal-form {
+//     width: 528px;
+//   }
+//   .modal-form-input {
+//     width: 448px;
+//   }
+//   .modal-form-text {
+//     width: 448px;
+//   }
+//   .modal-form-option-label {
+//     font-size: 14px;
+//     line-height: 1.71;
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 30px;
+//     padding-left: 20px;
+//     font-size: 14px;
+//     line-height: 1.71;
+//     letter-spacing: 0.03em;
+//   }
+//   .modal-form-option-link {
+//     font-size: 14px;
+//     line-height: 1.71;
+//   }
+// }
