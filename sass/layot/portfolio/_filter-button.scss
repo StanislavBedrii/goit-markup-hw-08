@@ -1,9 +1,6 @@
 /* Оформление страницы ПОРТФОЛИО */
 /* Оформление фильтер-кнопок */
-.section-filter-button {
-  padding-top: 93px;
-  padding-bottom: 34px;
-}
+
 .filter-button {
   padding-top: 6px;
   padding-right: 22px;
@@ -28,10 +25,50 @@
   }
 }
 
-.filter-button-list {
-  @include flex();
-}
-
 .filter-button-item:not(:last-child) {
   margin-right: 8px;
+}
+
+// Стили для смартфона ======================
+
+@media screen and (max-width: 767px) {
+  .section-filter-button {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .filter-button-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter-button-item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+}
+
+// Стили для планшета ======================
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-button-list {
+    @include flex();
+  }
+
+  .section-filter-button {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+// Стили для десктопа ======================
+
+@media screen and (min-width: 1200px) {
+  .section-filter-button {
+    padding-top: 93px;
+    padding-bottom: 50px;
+  }
+
+  .filter-button-list {
+    @include flex();
+  }
 }

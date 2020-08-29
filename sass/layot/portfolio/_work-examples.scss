@@ -1,25 +1,4 @@
 /* Оформление примеров-работ */
-.section-work-examples {
-  padding-bottom: 94px;
-}
-.work-examples-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.work-examples-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
-  height: 404px;
-
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
-  }
-}
-
 .work-examples-title {
   font-family: $main-font;
   @include font($fs: 18px, $lh: 2);
@@ -75,4 +54,74 @@
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+// Стили для смартфона ======================
+
+@media screen and (max-width: 767px) {
+  .section-work-examples {
+    padding-bottom: 60px;
+  }
+
+  .work-examples-item {
+    margin-bottom: 30px;
+    width: 450px;
+    height: 404px;
+  }
+
+  .work-examples-description {
+    padding: 77px 24px;
+  }
+}
+
+// Стили для планшета ======================
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .section-work-examples {
+    padding-bottom: 60px;
+  }
+
+  .work-examples-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .work-examples-item {
+    width: 354px;
+    height: 404px;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  .work-examples-description {
+    padding: 49px 24px;
+  }
+}
+
+// Стили для десктопа ======================
+
+@media screen and (min-width: 1200px) {
+  .section-work-examples {
+    padding-bottom: 94px;
+  }
+
+  .work-examples-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work-examples-item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 370px;
+    height: 404px;
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
+  }
 }

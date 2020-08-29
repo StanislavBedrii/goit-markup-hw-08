@@ -768,6 +768,7 @@ img {
   .header-contacts-envelope-icon,
   .header-contacts-tel-icon {
     margin-right: 10px;
+    fill: #757575;
   }
 }
 
@@ -1610,6 +1611,10 @@ img {
     width: 450px;
     margin-bottom: 20px;
   }
+  .subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1651,6 +1656,14 @@ img {
   }
   .footer .container {
     display: flex;
+  }
+  .footer-for-tablet {
+    display: flex;
+  }
+  .footer-logo-addres,
+  .footer-join {
+    display: flex;
+    flex-direction: column;
   }
   .footer-address {
     margin-right: 69px;

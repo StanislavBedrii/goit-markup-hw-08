@@ -155,6 +155,11 @@
     width: 450px;
     margin-bottom: 20px;
   }
+
+  .subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // Стили для планшета ======================
@@ -205,6 +210,16 @@
     .container {
       display: flex;
     }
+  }
+
+  .footer-for-tablet {
+    display: flex;
+  }
+
+  .footer-logo-addres,
+  .footer-join {
+    display: flex;
+    flex-direction: column;
   }
 
   .footer-address {
